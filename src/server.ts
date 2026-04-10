@@ -2,7 +2,7 @@
  * Server
  */
 
-import app from "./src/app";
+import app from "./app";
 
 Bun.serve({
 	port: Number(Bun.env.PORT ?? 3000),
