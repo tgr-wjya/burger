@@ -1,19 +1,26 @@
 {
-  "name": "burger",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@biomejs/biome": "2.4.11",
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "@hono/zod-validator": "^0.7.6",
-    "hono": "^4.12.12",
-    "husky": "^9.1.7",
-    "zod": "^4.3.6"
-  }
+	"name": "burger",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@biomejs/biome": "2.4.11",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@hono/zod-validator": "^0.7.6",
+		"hono": "^4.12.12",
+		"husky": "^9.1.7",
+		"zod": "^4.3.6"
+	},
+	"scripts": {
+		"prepare": "husky",
+		"dev": "bun --watch index.ts",
+		"biome:check": "bunx biome check --write",
+		"biome:lint": "bunx biome lint",
+		"biome:ci": "bunx biome ci"
+	}
 }
